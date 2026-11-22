@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-14">
           <span className="text-xs font-heading font-semibold text-rose-500 uppercase tracking-widest block mb-2">
@@ -52,7 +52,7 @@ export default function Contact() {
 
         {/* Two Prominent Action Buttons: Call Me (tel:) & Email Me (mailto:) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-12">
-          
+
           {/* CALL ME BUTTON */}
           <a
             href={`tel:${personalInfo.phone}`}
@@ -108,7 +108,7 @@ export default function Contact() {
 
         {/* Contact Form & Socials Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-          
+
           {/* Social Links (2 cols) */}
           <div className="lg:col-span-2 glass-card rounded-2xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800 space-y-6">
             <div>
@@ -140,26 +140,6 @@ export default function Contact() {
                 <Linkedin className="w-4 h-4 text-slate-500" />
                 <span className="font-heading text-xs font-semibold">LinkedIn</span>
               </a>
-
-              <a
-                href={personalInfo.social.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-amber-500 hover:text-amber-500 transition-colors"
-              >
-                <Twitter className="w-4 h-4 text-slate-500" />
-                <span className="font-heading text-xs font-semibold">Twitter</span>
-              </a>
-
-              <a
-                href={personalInfo.social.discord}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-purple-500 hover:text-purple-500 transition-colors"
-              >
-                <MessageSquare className="w-4 h-4 text-slate-500" />
-                <span className="font-heading text-xs font-semibold">Discord</span>
-              </a>
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800">
@@ -167,14 +147,14 @@ export default function Contact() {
                 Location & Availability
               </span>
               <p className="font-body text-xs text-slate-600 dark:text-slate-400">
-                Based in India, open to remote full-time opportunities and selected contract engineering.
+                Based in Una, Himachal Pradesh, open to internships and full time oppurtunities PAN India.
               </p>
             </div>
           </div>
 
           {/* Contact Form (3 cols) */}
           <div className="lg:col-span-3 glass-card rounded-2xl p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800">
-            
+
             {/* Success Toast */}
             {submitted && (
               <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-center flex items-center justify-center gap-2 text-emerald-700 dark:text-emerald-300">

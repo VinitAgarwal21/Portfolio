@@ -14,7 +14,7 @@ export const personalInfo = {
 
   // Profile Picture URL (Fetched from your GitHub avatar; change to any image or "/profile.jpg")
   avatar: "https://avatars.githubusercontent.com/u/149244622?v=4",
-  
+
   // Primary Title / Role
   title: "Full-Stack Software Engineer & AI Developer",
 
@@ -31,7 +31,7 @@ export const personalInfo = {
   bio: "Full-stack and Generative AI developer focused on building clean, high-performance web applications, autonomous agent workflows, and scalable cloud backends. Passionate about crisp user experiences, modern architecture, and delivering code that makes an impact.",
 
   // Contact coordinates
-  phone: "+91-9876543210", // Change to your phone number for "Call Me" link
+  phone: "+91-7091034163", // Change to your phone number for "Call Me" link
   email: "vinitagarwal759@gmail.com", // Your email for "Email Me" link
   location: "India / Remote",
   status: "Available for new opportunities", // Clean availability pill
@@ -39,18 +39,16 @@ export const personalInfo = {
   // Social & profile URLs
   social: {
     github: "https://github.com/VinitAgarwal21",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-    discord: "https://discord.com"
+    linkedin: "https://www.linkedin.com/in/vinit-agarwal-214234259",
   },
 
-  // Stats shown in the Hero banner
-  stats: [
-    { label: "REPOSITORIES", value: "28+" },
-    { label: "YEARS EXP", value: "3+" },
-    { label: "CONTRIBUTIONS", value: "1.2K+" },
-    { label: "SATISFACTION", value: "99%" },
-  ]
+  // // Stats shown in the Hero banner
+  // stats: [
+  //   { label: "REPOSITORIES", value: "28+" },
+  //   { label: "YEARS EXP", value: "3+" },
+  //   { label: "CONTRIBUTIONS", value: "1.2K+" },
+  //   { label: "SATISFACTION", value: "99%" },
+  // ]
 };
 
 /**
@@ -123,51 +121,27 @@ export const skillCategories = [
 export const experiences = [
   {
     id: "exp-1",
-    role: "Full-Stack & GenAI Engineer",
-    company: "Freelance & Independent Projects",
+    role: "Full Stack Developer Intern",
+    company: "Avijo",
     location: "Remote",
-    period: "2024 - PRESENT",
-    type: "Full-Time",
-    status: "Current",
-    description: "Building production-grade web applications, Model Context Protocol (MCP) servers, and autonomous agent workflows.",
-    bullets: [
-      "Engineered autonomous AI agents using LangChain, LangGraph, and Python for automated reasoning and document retrieval.",
-      "Built responsive, accessible web applications with Next.js, React, and Tailwind CSS serving live users.",
-      "Designed and deployed low-latency WebSocket backends and integrated vector search databases for RAG pipelines."
-    ],
-    tech: ["React", "TypeScript", "Python", "GenAI", "LangChain", "Node.js", "Docker"]
-  },
-  {
-    id: "exp-2",
-    role: "Python Backend Developer Intern",
-    company: "Valura Ledger (2CentsCapital)",
-    location: "Remote / Internship",
-    period: "2024",
+    period: "Jun 2025 - Aug 2025",
     type: "Internship",
     status: "Completed",
-    description: "Developed and optimized financial backend microservices, data validation pipelines, and REST APIs.",
+    description: "Developed and maintained full-stack features for a healthcare platform, building responsive React applications, scalable REST APIs, and real-time communication systems.",
     bullets: [
-      "Implemented secure, high-throughput backend endpoints handling transactional data with strict validation.",
-      "Collaborated with engineering leads to write automated test suites and reduce API response latency.",
-      "Participated in architecture design reviews and automated deployment workflows."
+      "Built the React.js + Redux frontend with dynamic forms, centralized state management, and REST API integrations.",
+      "Developed and maintained modular backend REST APIs, collaborating with product and engineering teams to deliver features from ideation to production.",
+      "Implemented real-time chat and notification systems using Socket.IO and Firebase, enabling seamless communication between doctors, patients, and clinics."
     ],
-    tech: ["Python", "FastAPI", "PostgreSQL", "REST APIs", "Git", "Docker"]
-  },
-  {
-    id: "exp-3",
-    role: "Full-Stack Web Developer",
-    company: "Academic & Open-Source Projects",
-    location: "India",
-    period: "2023 - 2024",
-    type: "Projects",
-    status: "Completed",
-    description: "Created comprehensive web applications, cloning real-world architectures like Zerodha, Zoom, and Airbnb.",
-    bullets: [
-      "Engineered a full-stack hotel booking platform (Wanderlust) with user authentication, reviews, and interactive maps.",
-      "Developed a real-time WebRTC video conferencing app with instant meeting rooms and live chat.",
-      "Built financial analytics dashboards with interactive candlestick charting and order simulation."
-    ],
-    tech: ["JavaScript", "TypeScript", "React", "Node.js", "Express", "MongoDB"]
+    tech: [
+      "React.js",
+      "Redux",
+      "Node.js",
+      "REST APIs",
+      "Socket.IO",
+      "Firebase",
+      "JavaScript"
+    ]
   }
 ];
 
@@ -181,26 +155,67 @@ export const experiences = [
  */
 export const projects = [
   {
-    id: "project-aragen-mcp",
-    title: "Aragen GenAI MCP",
-    tagline: "Model Context Protocol (MCP) server & Agentic AI hackathon submission",
-    description: "An advanced Model Context Protocol (MCP) server and agentic AI solution engineered for the Aragen Data Science & AI Hackathon, bridging LLMs with specialized tool calling and domain workflows.",
+    id: "project-camsenseai",
+    title: "CamSense AI",
+    tagline: "AI-powered smart CCTV surveillance and automated threat detection",
+    description: "A full-stack smart surveillance platform that transforms live camera feeds into actionable events and alerts. Integrates YOLOv8 and OpenCV for real-time person and bladed-weapon detection, along with a face-recognition pipeline using YuNet and SFace for automated attendance, identity matching, and unknown-person alerts. Features a live dashboard with severity-based notifications.",
     image: "",
-    tags: ["Python", "Agentic AI", "GenAI", "MCP", "Machine Learning"],
-    githubUrl: "https://github.com/VinitAgarwal21/Aragen-GenAI-MCP",
-    liveUrl: "https://aragen-gen-ai-mcp-jwof-alpha.vercel.app/",
-    badge: "GenAI Hackathon",
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "FastAPI",
+      "YOLOv8",
+      "OpenCV",
+      "Computer Vision",
+      "Socket.IO"
+    ],
+    githubUrl: "https://github.com/VinitAgarwal21/camsenseai",
+    liveUrl: "",
+    badge: "Computer Vision"
   },
   {
-    id: "project-zoom-clone",
-    title: "Zoom Clone",
-    tagline: "Real-time WebRTC video conferencing with meeting rooms",
-    description: "Full-stack real-time video communication platform supporting HD video, audio streaming, screen sharing, meeting room creation, and dynamic participant management.",
+    id: "project-ai-notes-agent",
+    title: "AI Notes Generation Agent",
+    tagline: "Multi-agent AI system for intelligent research and automated technical documentation",
+    description: "Built a multi-agent LangGraph pipeline using parallel worker nodes and structured Pydantic schemas to automate technical content generation. Implemented an intelligent RAG routing system that classifies topics into closed-book, hybrid, and open-book modes, integrating Tavily web research and evidence citations for factual accuracy. Includes a real-time Streamlit dashboard with thought logs, dynamic planning visualization, automated image sourcing, and downloadable Markdown reports.",
     image: "",
-    tags: ["TypeScript", "React", "WebRTC", "Next.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/VinitAgarwal21/Zoom_Clone",
-    liveUrl: "https://zoomclone-cyan.vercel.app",
-    badge: "Live WebRTC",
+    tags: [
+      "Python",
+      "LangGraph",
+      "Gemini",
+      "RAG",
+      "LangChain",
+      "Tavily",
+      "Pydantic",
+      "Streamlit",
+      "AI Agents"
+    ],
+    githubUrl: "",
+    liveUrl: "",
+    badge: "Agentic AI"
+  },
+  {
+    id: "project-mindease",
+    title: "MindEase",
+    tagline: "Mental wellness platform with real-time communication and NLP-powered sentiment analysis",
+    description: "Developed a full-stack mental health platform with a Node.js REST backend and React frontend, featuring user authentication, profile management, and real-time chat using Socket.IO. Built NLP pipelines using NLTK and spaCy to analyze user journal entries and classify sentiment in real time. Integrated frontend and backend services to deliver an interactive mental wellness experience.",
+    image: "",
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "NLTK",
+      "spaCy",
+      "NLP",
+      "JavaScript"
+    ],
+    githubUrl: "",
+    liveUrl: "",
+    badge: "Full-Stack & NLP"
   },
   {
     id: "project-city-companion",
@@ -234,61 +249,6 @@ export const projects = [
     githubUrl: "https://github.com/VinitAgarwal21/Langraph-Chatbot",
     liveUrl: "",
     badge: "Agentic AI",
-  },
-  {
-    id: "project-self-rag",
-    title: "Self-RAG // Self-Reflective AI",
-    tagline: "Adaptive Retrieval-Augmented Generation with reflection tokens",
-    description: "Implementation of Self-Reflective Retrieval-Augmented Generation that dynamically retrieves passages on demand and critiques its own generated answers to eliminate AI hallucinations.",
-    image: "",
-    tags: ["Python", "RAG", "GenAI", "Vector DB", "Information Retrieval"],
-    githubUrl: "https://github.com/VinitAgarwal21/Self-RAG",
-    liveUrl: "",
-    badge: "RAG Architecture",
-  },
-  {
-    id: "project-zerodha-clone",
-    title: "Zerodha Trading Clone",
-    tagline: "Full-stack financial dashboard with market charts and order book",
-    description: "A stock market trading platform clone inspired by Zerodha Kite, featuring interactive equity charts, real-time watchlist management, buy/sell orders, and portfolio holdings tracking.",
-    image: "",
-    tags: ["React", "JavaScript", "Node.js", "Express", "Financial UI"],
-    githubUrl: "https://github.com/VinitAgarwal21/Zerodha-Clone",
-    liveUrl: "",
-    badge: "FinTech Clone",
-  },
-  {
-    id: "project-ai-content-studio",
-    title: "AI Content Studio",
-    tagline: "Generative content generation suite for automated marketing",
-    description: "An automated studio generating structured marketing copy, articles, and social media captions with customizable tone, audience targeting, and prompt templates.",
-    image: "",
-    tags: ["Python", "GenAI", "Prompt Engineering", "FastAPI"],
-    githubUrl: "https://github.com/VinitAgarwal21/AI-Content-Studio",
-    liveUrl: "",
-    badge: "Content AI",
-  },
-  {
-    id: "project-camsenseai",
-    title: "Camsense AI",
-    tagline: "Computer vision and camera intelligence system",
-    description: "Smart vision analysis suite that processes video feeds to perform object recognition, scene detection, and automated event triggers.",
-    image: "",
-    tags: ["JavaScript", "Computer Vision", "AI", "Node.js"],
-    githubUrl: "https://github.com/VinitAgarwal21/camsenseai",
-    liveUrl: "",
-    badge: "Computer Vision",
-  },
-  {
-    id: "project-react-calendar",
-    title: "React Calendar Component",
-    tagline: "Custom lightweight calendar and event scheduler",
-    description: "A responsive, accessible calendar component for scheduling events, date picking, and agenda management built with clean CSS and reactive state.",
-    image: "",
-    tags: ["React", "CSS3", "JavaScript", "UI Components"],
-    githubUrl: "https://github.com/VinitAgarwal21/React-Calendar",
-    liveUrl: "https://react-calendar-jade-eight.vercel.app",
-    badge: "Live Component",
   }
 ];
 

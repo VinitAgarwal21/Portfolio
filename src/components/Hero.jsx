@@ -43,7 +43,7 @@ export default function Hero({ profileData }) {
       className="relative min-h-[92vh] pt-32 pb-16 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 z-10"
     >
       <div className="max-w-4xl mx-auto w-full text-center relative z-20">
-        
+
         {/* Availability Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 mb-8 backdrop-blur-md shadow-sm">
           <span className="flex h-2 w-2 relative">
@@ -98,7 +98,7 @@ export default function Hero({ profileData }) {
           </a>
         </div>
 
-        {/* Stats Banner */}
+        {/* Stats Banner
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
           {personalInfo.stats.map((stat, index) => (
             <div
@@ -113,7 +113,7 @@ export default function Hero({ profileData }) {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Scroll Indicator */}
         <div className="mt-12 flex justify-center">
