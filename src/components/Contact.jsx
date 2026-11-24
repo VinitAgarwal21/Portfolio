@@ -12,6 +12,9 @@ export default function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const recipientEmail = personalInfo.email || "vinitagarwal759@gmail.com";
 
   const handleChange = (e) => {
     setFormState({
@@ -20,17 +23,48 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage(null);
 
-    // Simulate sending message
-    setTimeout(() => {
+    try {
+      // Send real email to recipientEmail via FormSubmit AJAX service
+      const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipientEmail)}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          _replyto: formState.email,
+          _subject: `[Portfolio] ${formState.subject} - from ${formState.name}`,
+          message: formState.message,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === 'true' || data.success === true)) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitted(false), 8000);
+      } else {
+        throw new Error(data.message || 'Unable to send message via form service.');
+      }
+    } catch (err) {
+      console.error('Email send error:', err);
+      // Fallback: If network/adblocker blocks the API, provide direct mailto option
+      setErrorMessage(
+        'Could not send automatically. Click below to send directly via your mail client.'
+      );
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-      setFormState({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitted(false), 7000);
-    }, 1000);
+    }
   };
 
   return (
@@ -162,6 +196,20 @@ export default function Contact() {
                 <span className="font-heading text-xs font-semibold">
                   Message sent successfully! Thanks for reaching out — I will respond shortly.
                 </span>
+              </div>
+            )}
+
+            {/* Error Message Fallback */}
+            {errorMessage && (
+              <div className="mb-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-xs text-amber-800 dark:text-amber-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <span>{errorMessage}</span>
+                <a
+                  href={`mailto:${recipientEmail}?subject=${encodeURIComponent(formState.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(formState.message || '')}%0A%0AFrom: ${encodeURIComponent(formState.name || '')} (${encodeURIComponent(formState.email || '')})`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-500 text-white font-heading font-semibold text-xs hover:bg-rose-600 transition-colors shrink-0"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>Open Mail Client</span>
+                </a>
               </div>
             )}
 
