@@ -8,6 +8,17 @@
  * =============================================================================
  */
 
+// Import project images from src/data/images/
+import camsenseImg from './images/camsense.jpg';
+import notesGenImg from './images/notes_generation.png';
+import mindeaseImg from './images/mindease.png';
+import cityCompanionImg from './images/citycompanion.png';
+
+// Dynamic image helper: Automatically loads any image placed inside src/data/images/
+// Usage: getImage('your-image.png') or use direct imports like camsenseImg above
+const localImages = import.meta.glob('./images/*.{png,jpg,jpeg,svg,webp}', { eager: true, import: 'default' });
+export const getImage = (fileName) => localImages[`./images/${fileName}`] || fileName;
+
 export const personalInfo = {
   // Your Full Name (Displayed in Hero & Navigation)
   name: "Vinit Kumar Agarwal",
@@ -159,7 +170,7 @@ export const projects = [
     title: "CamSense AI",
     tagline: "AI-powered smart CCTV surveillance and automated threat detection",
     description: "A full-stack smart surveillance platform that transforms live camera feeds into actionable events and alerts. Integrates YOLOv8 and OpenCV for real-time person and bladed-weapon detection, along with a face-recognition pipeline using YuNet and SFace for automated attendance, identity matching, and unknown-person alerts. Features a live dashboard with severity-based notifications.",
-    image: "",
+    image: camsenseImg,
     tags: [
       "React",
       "TypeScript",
@@ -181,7 +192,7 @@ export const projects = [
     title: "AI Notes Generation Agent",
     tagline: "Multi-agent AI system for intelligent research and automated technical documentation",
     description: "Built a multi-agent LangGraph pipeline using parallel worker nodes and structured Pydantic schemas to automate technical content generation. Implemented an intelligent RAG routing system that classifies topics into closed-book, hybrid, and open-book modes, integrating Tavily web research and evidence citations for factual accuracy. Includes a real-time Streamlit dashboard with thought logs, dynamic planning visualization, automated image sourcing, and downloadable Markdown reports.",
-    image: "",
+    image: notesGenImg,
     tags: [
       "Python",
       "LangGraph",
@@ -202,7 +213,7 @@ export const projects = [
     title: "MindEase",
     tagline: "Mental wellness platform with real-time communication and NLP-powered sentiment analysis",
     description: "Developed a full-stack mental health platform with a Node.js REST backend and React frontend, featuring user authentication, profile management, and real-time chat using Socket.IO. Built NLP pipelines using NLTK and spaCy to analyze user journal entries and classify sentiment in real time. Integrated frontend and backend services to deliver an interactive mental wellness experience.",
-    image: "",
+    image: mindeaseImg,
     tags: [
       "React.js",
       "Node.js",
@@ -222,34 +233,34 @@ export const projects = [
     title: "City Companion App",
     tagline: "Local activity discovery platform with interactive map & plan sharing",
     description: "A local activity-discovery platform helping people find and join nearby plans (movies, gaming, outdoor sports, food). Features an interactive map, plan posting, join requests, and smart recommendations.",
-    image: "",
+    image: cityCompanionImg,
     tags: ["TypeScript", "React", "Tailwind CSS", "Interactive Maps", "Node.js"],
     githubUrl: "https://github.com/VinitAgarwal21/City-Companion-App",
     liveUrl: "",
     badge: "Featured App",
   },
-  {
-    id: "project-delta-wanderlust",
-    title: "Wanderlust // Hotel Booking",
-    tagline: "Full-stack vacation rental & booking platform inspired by Airbnb",
-    description: "A comprehensive hotel and vacation stay reservation platform with user accounts, listing reviews, geocoded map coordinates, image uploads, and full CRUD workflows.",
-    image: "",
-    tags: ["Node.js", "Express", "MongoDB", "JavaScript", "Bootstrap"],
-    githubUrl: "https://github.com/VinitAgarwal21/Delta",
-    liveUrl: "https://wanderlust-hr39.onrender.com",
-    badge: "Full-Stack Live",
-  },
-  {
-    id: "project-langraph-chatbot",
-    title: "LangGraph AI Chatbot",
-    tagline: "Stateful agentic chatbot built with LangGraph & LLMs",
-    description: "An agentic conversational assistant leveraging LangGraph's cyclic state graphs for multi-step reasoning, tool execution, memory persistence, and dynamic conversation flows.",
-    image: "",
-    tags: ["Python", "LangGraph", "LangChain", "AI Agents", "LLMs"],
-    githubUrl: "https://github.com/VinitAgarwal21/Langraph-Chatbot",
-    liveUrl: "",
-    badge: "Agentic AI",
-  }
+  // {
+  //   id: "project-delta-wanderlust",
+  //   title: "Wanderlust // Hotel Booking",
+  //   tagline: "Full-stack vacation rental & booking platform inspired by Airbnb",
+  //   description: "A comprehensive hotel and vacation stay reservation platform with user accounts, listing reviews, geocoded map coordinates, image uploads, and full CRUD workflows.",
+  //   image: "",
+  //   tags: ["Node.js", "Express", "MongoDB", "JavaScript", "Bootstrap"],
+  //   githubUrl: "https://github.com/VinitAgarwal21/Delta",  
+  //   liveUrl: "https://wanderlust-hr39.onrender.com",
+  //   badge: "Full-Stack Live",
+  // },
+  // {
+  //   id: "project-langraph-chatbot",
+  //   title: "LangGraph AI Chatbot",
+  //   tagline: "Stateful agentic chatbot built with LangGraph & LLMs",
+  //   description: "An agentic conversational assistant leveraging LangGraph's cyclic state graphs for multi-step reasoning, tool execution, memory persistence, and dynamic conversation flows.",
+  //   image: "",
+  //   tags: ["Python", "LangGraph", "LangChain", "AI Agents", "LLMs"],
+  //   githubUrl: "https://github.com/VinitAgarwal21/Langraph-Chatbot",
+  //   liveUrl: "",
+  //   badge: "Agentic AI",
+  // }
 ];
 
 /**
